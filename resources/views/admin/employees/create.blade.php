@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Add New Employee</h1>
+    <h1>Tambah Employee</h1>
     <form action="{{ route('employees.store') }}" method="POST">
         @csrf
         <!-- User Selection -->
@@ -79,8 +79,8 @@
             <input type="text" name="salary" class="form-control" required>
         </div>
 
-        <button type="submit" class="btn btn-success">Save</button>
-        <a href="{{ route('employees.index') }}" class="btn btn-secondary">Cancel</a>
+        <button type="submit" class="btn btn-success">Simpan</button>
+        <a href="{{ route('employees.index') }}" class="btn btn-secondary">Batal</a>
     </form>
 </div>
 @endsection

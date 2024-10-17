@@ -9,7 +9,7 @@
 
             <!-- Add New Department Button -->
             <a href="{{ route('departments.create') }}" class="btn btn-primary mb-3 float-right">
-                Add Department
+                Tambah Department
             </a>
 
             <!-- Search Field -->

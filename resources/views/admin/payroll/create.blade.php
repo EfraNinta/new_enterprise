@@ -1,7 +1,7 @@
 @extends('admin.app')
 @section('content')
 <div class="container">
-    <h1>Add Payroll</h1>
+    <h1>Tambah Payroll</h1>
     
     <form action="{{ route('payroll.store') }}" method="POST">
         @csrf

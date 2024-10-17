@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Add New Department</h1>
+    <h1>Tambah Department</h1>
     <form action="{{ route('departments.store') }}" method="POST">
         @csrf
         <div class="form-group">
@@ -16,8 +16,8 @@
             <textarea name="description" class="form-control"></textarea>
         </div>
 
-        <button type="submit" class="btn btn-success">Save</button>
-        <a href="{{ route('departments.index') }}" class="btn btn-secondary">Cancel</a>
+        <button type="submit" class="btn btn-success">Simpan</button>
+        <a href="{{ route('departments.index') }}" class="btn btn-secondary">Batal</a>
     </form>
 </div>
 @endsection

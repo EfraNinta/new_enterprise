@@ -17,8 +17,8 @@
             <textarea name="description" class="form-control">{{ $departments->description }}</textarea>
         </div>
 
-        <button type="submit" class="btn btn-success">Update</button>
-        <a href="{{ route('departments.index') }}" class="btn btn-secondary">Cancel</a>
+        <button type="submit" class="btn btn-success">Ubah</button>
+        <a href="{{ route('departments.index') }}" class="btn btn-secondary">Batal</a>
     </form>
 </div>
 @endsection

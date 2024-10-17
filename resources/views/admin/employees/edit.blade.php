@@ -84,8 +84,8 @@
             <input type="number" name="salary" class="form-control" value="{{ $employee->salary }}" required>
         </div>
 
-        <button type="submit" class="btn btn-success">Update</button>
-        <a href="{{ route('employees.index') }}" class="btn btn-secondary">Cancel</a>
+        <button type="submit" class="btn btn-success">Tambah</button>
+        <a href="{{ route('employees.index') }}" class="btn btn-secondary">Batal</a>
     </form>
 </div>
 @endsection

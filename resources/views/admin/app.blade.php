@@ -44,56 +44,57 @@
                     </li>
                     <li class="menu-item">
                         <a href="#" class="menu-link menu-toggle">
-                            <i class="menu-icon tf-icons bx bx-home" style="color: #007bff;"></i>
+                            <i class="menu-icon tf-icons bx bx-user" style="color: #007bff;"></i> <!-- Changed to bx-user -->
                             <div data-i18n="Menu 1">Human Resource</div>
                         </a>
                         <ul class="menu-sub">
-                            
                             <li class="menu-item ">
                                 <a href="{{ route('departments.index') }}" class="menu-link">
-                                    <i class="menu-icon tf-icons bx bx-home" style="color: #007bff;"></i>
+                                    <i class="menu-icon tf-icons bx bx-buildings" style="color: #007bff;"></i> <!-- Changed to bx-buildings -->
                                     <div>Departemant</div>
                                 </a>
                             </li>
                             <li class="menu-item">
                                 <a href="{{ route('employees.index') }}" class="menu-link">
-                                    <i class="menu-icon tf-icons bx bx-group"></i>
+                                    <i class="menu-icon tf-icons bx bx-id-card"></i> <!-- Changed to bx-id-card -->
                                     <div data-i18n="Sub Menu 2">Employees</div>
                                 </a>
                             </li>
                             <li class="menu-item">
                                 <a href="{{ route('payroll.index') }}" class="menu-link">
-                                    <i class="menu-icon tf-icons bx bx-wallet"></i>
+                                    <i class="menu-icon tf-icons bx bx-money"></i> <!-- Changed to bx-money -->
                                     <div data-i18n="Sub Menu 2">Payrol</div>
                                 </a>
                             </li>
                             <li class="menu-item">
-                            <a href="{{ route('leave.index') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-calendar"></i>
+                                <a href="{{ route('leave.index') }}" class="menu-link">
+                                    <i class="menu-icon tf-icons bx bx-calendar-event"></i> <!-- Changed to bx-calendar-event -->
                                     <div data-i18n="Sub Menu 2">Leave</div>
                                 </a>
                             </li>
                             <li class="menu-item">
-                            <a href="{{ route('attendance.index') }}" class="menu-link">
-                                 <i class="menu-icon tf-icons bx bx-time-five"></i>
+                                <a href="{{ route('attendance.index') }}" class="menu-link">
+                                    <i class="menu-icon tf-icons bx bx-time"></i> <!-- Changed to bx-time -->
                                     <div data-i18n="Sub Menu 2">Presence</div>
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li class="menu-item">
-                    <a href="#" class="menu-link menu-toggle">
-                            <i class="menu-icon tf-icons bx bx-home"></i>
+                        <a href="#" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-cog"></i> <!-- Changed to bx-cog -->
                             <div data-i18n="Menu 1">User Management</div>
                         </a>
                         <ul class="menu-sub">
                             <li class="menu-item">
                                 <a href="{{ route('submenu1') }}" class="menu-link">
+                                    <i class="menu-icon tf-icons bx bx-user-circle"></i> <!-- Changed to bx-user-circle -->
                                     <div>Users</div>
                                 </a>
                             </li>
                             <li class="menu-item">
                                 <a href="{{ route('roles.index') }}" class="menu-link">
+                                    <i class="menu-icon tf-icons bx bx-shield"></i> <!-- Changed to bx-shield -->
                                     <div data-i18n="Sub Menu 2">Roles</div>
                                 </a>
                             </li>

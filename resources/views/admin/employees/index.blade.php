@@ -8,7 +8,7 @@
 
             <!-- Add New Employee Button -->
             <a href="{{ route('employees.create') }}" class="btn btn-primary mb-3 float-right">
-                Add Employee
+                Tambah Employee
             </a>
 
             <!-- Search Field -->
