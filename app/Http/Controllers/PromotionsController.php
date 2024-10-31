@@ -11,7 +11,7 @@ class PromotionsController extends Controller
     public function index()
     {
         $promotions = Promotion::all(); // Mengambil semua data promosi dari database
-        return view('promotions.index', compact('promotions')); // Mengembalikan tampilan dengan data promosi
+        return response()->json($promotions); // Mengembalikan data promosi dalam format JSON
     }
 
     // Menyimpan promosi baru
@@ -27,21 +27,23 @@ class PromotionsController extends Controller
         ]);
 
         // Membuat promosi baru di database
-        Promotion::create($validatedData);
-        return redirect()->route('promotions.index')->with('success', 'Promosi berhasil ditambahkan.'); // Redirect dengan pesan sukses
+        $promotion = Promotion::create($validatedData);
+        return response()->json($promotion, 201); // Mengembalikan data promosi yang baru dibuat
     }
 
     // Menampilkan promosi berdasarkan ID
     public function show($id)
     {
-        $promotion = Promotion::findOrFail($id); // Mencari promosi berdasarkan ID
-        return view('promotions.show', compact('promotion')); // Mengembalikan tampilan dengan data promosi
+        // Mencari promosi berdasarkan ID
+        $promotion = Promotion::findOrFail($id); // Jika tidak ditemukan, akan mengembalikan 404
+        return response()->json($promotion);
     }
 
     // Memperbarui promosi yang ada
     public function update(Request $request, $id)
     {
-        $promotion = Promotion::findOrFail($id); // Mencari promosi berdasarkan ID
+        // Mencari promosi berdasarkan ID
+        $promotion = Promotion::findOrFail($id);
 
         // Validasi data yang diterima
         $validatedData = $request->validate([
@@ -54,14 +56,15 @@ class PromotionsController extends Controller
 
         // Memperbarui data promosi di database
         $promotion->update($validatedData);
-        return redirect()->route('promotions.index')->with('success', 'Promosi berhasil diperbarui.'); // Redirect dengan pesan sukses
+        return response()->json($promotion); // Mengembalikan data promosi yang telah diperbarui
     }
 
     // Menghapus promosi berdasarkan ID
     public function destroy($id)
     {
-        $promotion = Promotion::findOrFail($id); // Mencari promosi berdasarkan ID
+        // Mencari promosi berdasarkan ID
+        $promotion = Promotion::findOrFail($id);
         $promotion->delete(); // Menghapus promosi dari database
-        return redirect()->route('promotions.index')->with('success', 'Promosi berhasil dihapus.'); // Redirect dengan pesan sukses
+        return response()->json(null, 204); // Mengembalikan respons tanpa konten (204 No Content)
     }
 }

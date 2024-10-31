@@ -9,6 +9,13 @@ use App\Http\Controllers\PayrollController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\DepartmentController;
+use App\Mail\TestMail;
+use Illuminate\Support\Facades\Mail;
+use PhpParser\Node\Stmt\Return_;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\PromotionController;
+use App\Http\Controllers\PromotionsController;
+use App\Http\Controllers\SendPromotionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,9 +54,18 @@ route::resource('payroll', PayrollController::class);
 
 Route::resource('leave', LeaveController::class);
 
-
 Route::resource('attendance', AttendanceController::class);
 
+Route::resource('customers', CustomerController::class);
 
+Route::resource('promotions', PromotionsController::class);
 
+Route::post('send-promotion/{customer}/{promotion}', [SendPromotionController::class, 'sendPromotion'])->name('send-promotion');
 
+//email
+Route::get('email' , function(){
+
+    Mail::to('adi@email.com')
+        ->send(new TestMail);
+    return'OK';
+});
